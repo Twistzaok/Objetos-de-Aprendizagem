@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Objetos de Aprendizagem</title>
+        <link href="../style/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="../style/js/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="../style/style.css" type="text/css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel=icon href="../style/images/android.png">
+    </head>
+
+    <body class="bg-gray-7">
+        <nav class="bg-gray-9 px-4">
+            <img src="../style/images/duck.png" height="22px">
+            <a class="btn bg-gray-9 nav-button font-weight-bold green" href="../index.html">
+                Duck's Scripts
+            </a>
+            <a class="btn bg-gray-9 green nav-button" href="../leitura.html">
+                Leitura
+            </a>
+            <a class="btn bg-gray-9 green nav-button" href="../exercicios.html">
+                Exercícios
+            </a>
+        </nav>
+
+        <div class="container-2 topic-body mt-4 px-4">
+            <div class="topic-title mt-1 font-weight-bold text-center pb-1">
+                Content Providers
+            </div>
+        </div>
+
+        <div class="container-2 topic-body mt-2 px-4">
+            <div class="topic-subtitle mt-1 font-weight-bold text-center pb-1">
+                Conceito
+            </div>
+            <div class="mt-1 pb-2">
+                Os Content Providers ou Provedores de Conteúdo são os responsáveis por gerenciar o acesso a uma central de dados e funcionam de maneira parecida com um banco de dados relacional. Geralmente, o Provedor fornece sua própria UI que pode ser utilizada para manipular os dados. Os Provedores são majoritariamente destinados ao seu uso por outros aplicativos, que para se conectarem, fazem uso de um novo objeto conhecido como Cliente do Provedor - essa relação cria uma interface consistente para a troca de dados.
+                <br><br>
+                Costumam ser utilizados quando você pretende acessar um provedor de conteúdo existente ou criar o próprio provedor para fornecer acesso para outros aplicativos
+                <br><br>
+                Um dos Provedores Android é o Dicionário do Usuário, exemplificado a seguir:
+                <br>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">WORD</th>
+                        <th scope="col">APP_ID</th>
+                        <th scope="col">FREQUENCY</th>
+                        <th scope="col">LOCALE</th>
+                        <th scope="col">_ID</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>reduçãodomapa</td>
+                        <td>usuário1</td>
+                        <td>100</td>
+                        <td>en_US</td>
+                        <td>1</td>
+                      </tr>
+                      <tr>
+                        <td>pré-compilador</td>
+                        <td>usuário14</td>
+                        <td>200</td>
+                        <td>fr_FR	</td>
+                        <td>2</td>
+                      </tr>
+                      <tr>
+                        <td>miniaplicativo</td>
+                        <td>usuário2</td>
+                        <td>225</td>
+                        <td>fr_CA</td>
+                        <td>3</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="topic-subtitle mt-1 font-weight-bold text-center pb-1">
+                Acessar o Provedor
+            </div>
+            <div class="mt-1 pb-2">
+                Para acessar um Provedor é necessário utilizar um objeto do tipo do ContentResolver no Context do aplicativo para tornar-se cliente do Provedor. O ContentResolver comunica com o ContentProvider que performa a ação pedida e retorna os resultados. O ContentResolver pode realizar todas as ações de um CRUD.
+            </div>
+            <div class="topic-subtitle mt-1 font-weight-bold text-center pb-1">
+                URI's de Conteúdo
+            </div>
+            <div class="mt-1 pb-2">
+                Um URI de Conteúdo é um URI que identifica os dados de um Provedor, eles contêm o nome simbólico do Provedor e do identificador da tabela. Ao chamar um método para acessar uma tabela do Provedor, o URI de Conteúdo da tabela é um dos parâmetros necessários.
+            </div>
+            <div class="topic-subtitle mt-1 font-weight-bold text-center pb-1">
+                Consultas
+            </div>
+            <div class="mt-1 pb-2">
+                <span class="font-weight-bold">Construção</span>: Para recuperar dados de um Provedor, é primeiramente necessário criar uma consulta e definir algumas váriaveis para acessar o Provedor desejado.
+                <br><br>
+                <span class="font-weight-bold">Exibição</span>: Para exibir os dados, é necessário usar o método ContentResolver.query() que retorna um objeto Cursor contendo o conteúdo do Provedor para as colunas reqeridas na consulta. O Cursor possui métodos que possibilitam iterar, contar resultados, extrair dados, etc. É possível também usar o resultado de um Provedor para pesquisar em outro.
+            </div>
+            <div class="topic-subtitle mt-1 font-weight-bold text-center pb-1">
+                CRUD
+            </div>
+            <div class="mt-1 pb-2">
+                Para realizar o CRUD no Provedor, utiliza-se o objeto ContentResolver e chama-se o método correspondente.
+                <br><br>
+                <span class="font-weight-bold">Inserção</span>: O método ContentResolver.insert() é utilizado. O método insere conteúdo no provedor e retorna o conteúdo dessa linha.
+                <br><br>
+                <span class="font-weight-bold">Atualização</span>: ContentResolver.update() é utilizado. É necessário passar um parâmetro do tipo ContentValues, só é necessário adicionar valores no ContentValues para os campos que você pretende atualizar.
+                <br><br>
+                <span class="font-weight-bold">Exclusão</span>: ContentResolver.delete() é utilizado. É necessário especificar a seleção, informando o user que será deletado.
+            </div>
+        </div>
+
+        <div class="mt-4">
+
+        </div>
+    </body>
+</html>

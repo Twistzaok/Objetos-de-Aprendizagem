@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Objetos de Aprendizagem</title>
+        <link href="../style/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="../style/js/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="../style/style.css" type="text/css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel=icon href="../style/images/android.png">
+    </head>
+
+    <body class="bg-gray-7">
+        <nav class="bg-gray-9 px-4">
+            <img src="../style/images/duck.png" height="22px">
+            <a class="btn bg-gray-9 nav-button font-weight-bold green" href="../index.html">
+                Duck's Scripts
+            </a>
+            <a class="btn bg-gray-9 green nav-button" href="../leitura.html">
+                Leitura
+            </a>
+            <a class="btn bg-gray-9 green nav-button" href="../exercicios.html">
+                Exercícios
+            </a>
+        </nav>
+
+        <div class="container-2 topic-body mt-4 px-4">
+            <div class="topic-title mt-1 font-weight-bold text-center pb-1">
+                Broadcast Receivers
+            </div>
+        </div>
+
+        <div class="container-2 topic-body mt-2 px-4">
+            <div class="topic-subtitle mt-1 font-weight-bold text-center pb-1">
+                Introdução a Transmissões
+            </div>
+            <div class="mt-1 pb-2">
+                    Os aplicativos Android tem a capacidade de enviar ou receber mensagens de transmissão do sistema Android e de outros aplicativos Android. Os aplicativos que querem receber a transmissão devem increver-se e receberão quando determinado evento ocorrer, como por exemplo, quando o dispositivo sai ou entra do modo avião.
+            </div>
+            <div class="topic-subtitle mt-1 font-weight-bold text-center pb-1">
+                Conceito
+            </div>
+            <div class="mt-1 pb-2">
+                Para receber essas transmissões, os aplicativos Android tem a opção de receber as transmissões por intermédio dos Broadcast Receivers ou Receptores de Broadcast. O sistema cria um novo Receptor sempre que lida com transmissões novas. 
+            </div>
+            <div class="topic-subtitle mt-1 font-weight-bold text-center pb-1">
+                Criando um Receptor de Broadcast
+            </div>
+            <div class="mt-1 pb-2">
+                Para criar um Receptor no manifesto, é necessário especificar o &ltreceiver>, usar a subclasse BroadcastReceiver e implementar o onReceive(contexto, intenção), como em:
+                <xmp class="border border-light">
+    public class MyBroadcastReceiver extends BroadcastReceiver {
+        private static final String TAG = "MyBroadcastReceiver";
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            StringBuilder sb = new StringBuilder();
+            sb.append("Action: " + intent.getAction() + "\n");
+            sb.append("URI: " + intent.toUri(Intent.URI_INTENT_SCHEME).toString() + "\n");
+            String log = sb.toString();
+            Log.d(TAG, log);
+            Toast.makeText(context, log, Toast.LENGTH_LONG).show();
+        }
+    }
+                </xmp>
+                É possível também criar um receptor no Contexto, criando uma instância BroadcastReceiver e um IntentFilter fazendo o registro como registerReceiver(BroadcastReceiver, IntentFilter), como em:
+                <xmp class="border border-light">
+    IntentFilter filter = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
+        filter.addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED);
+        this.registerReceiver(br, filter);
+                </xmp>
+                Os receptores do contexto recebem Broadcast se seu registro for válido. É possível também parar de receber transmissões utilizando o unregisterReceiver(android.content.BroadcastReceiver).
+            </div>
+            <div class="topic-subtitle mt-1 font-weight-bold text-center pb-1">
+                Enviando Transmissões
+            </div>
+            <div class="mt-1 pb-2">
+                Existem 3 métodos diferentes de enviar transmissões	pelo Android, sendo eles:
+                <br><br>
+                <span class="font-weight-bold">1. sendOrderedBroadcast(Intent, String)</span>: Envia Broadcasts para um receptor por vez, assim, conferindo uma sequência aos receptores na qual pode ser decidido se a transmissão continuará ou será abortada.
+                <br><br>
+                <span class="font-weight-bold">2. sendBroadcast(Intent)</span>: Envia Broadcasts para todos os receptores, por não ter ordem, é mais eficiente.
+                <br><br>
+                <span class="font-weight-bold">3. LocalBroadcastManager.sendBroadcast</span>: Envia Broadcasts para todos os receptores que estão no mesmo aplicativo. É fortemente recomendado para este tipo de transmissão.
+                <br><br>
+                É possível também especificar um parâmetro de permissão em um receptor de transmissão usando registerReceiver(BroadcastReceiver, IntentFilter, String, Handler).
+            </div>
+        </div>
+        <div class="mt-4">
+
+        </div>
+    </body>
+</html>
