@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Objetos de Aprendizagem</title>
+        <link href="../style/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="../style/js/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="../style/style.css" type="text/css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel=icon href="../style/images/android.png">
+    </head>
+
+    <body class="bg-gray-7">
+        <nav class="bg-gray-9 px-4">
+            <img src="../style/images/duck.png" height="22px">
+            <a class="btn bg-gray-9 nav-button font-weight-bold green" href="../index.html">
+                Duck's Scripts
+            </a>
+            <a class="btn bg-gray-9 green nav-button" href="../leitura.html">
+                    Leitura
+            </a>
+            <a class="btn bg-gray-9 green nav-button" href="../exercicios.html">
+                Exercícios
+            </a>
+        </nav>
+
+        <div class="container-2 topic-body mt-4 px-4">
+            <div class="topic-title mt-1 font-weight-bold text-center pb-1">
+                Services
+            </div>
+        </div>
+
+        <div class="container-2 topic-body mt-2 px-4">
+            <div class="topic-subtitle mt-1 font-weight-bold text-center pb-1">
+                O que são?
+            </div>
+            <div class="mt-1 pb-2">
+                    Um Service é um componente que pode efetuar operações longas e que não fornece uma interface do usuário. Outros componentes podem iniciar e vincular-se a um serviço para interagir. Um serviço pode reproduzir música, executar E/S de arquivos imagens e interagir com um provedor de conteúdo a partir do segundo plano.
+            </div>
+            <div class="topic-subtitle mt-1 font-weight-bold text-center pb-1">
+                Conceito
+            </div>
+            <div class="mt-1 pb-2">
+                Como a navegação em aplicativos Mobile podem iniciar em lugares diferentes, ex: Whatsapp - (Lista de Conversas, Conversas), foi necessário a criação de algo que auxiliasse esse paradigma. Assim, ao implementar uma Activity como uma subclasse da classe Activity, a atividade serve como ponto inicial da interação do usuário com o aplicativo e pode iniciar também outras atividades, inclusive, de outros aplicativos. Embora as Activities trabalhem juntas, elas normalmente são independentes entre si, ou seja, tem ligações mínimas uma com as outras.
+                <br><br>
+                Normalmente, uma atividade implementa uma tela ou uma janela em uma aplicação, e como a maioria dos aplicativos possuem várias telas, logo eles possuem várias atividades. É comum também que um aplicativo tenha uma Activity principal, a qual se designa como a primeira tela a ser exibida para o usuário ao iniciar o App.
+            </div>
+            <div class="topic-subtitle mt-1 font-weight-bold text-center pb-1">
+                Criando uma Activity
+            </div>
+            <div class="mt-1 pb-2">
+                Para criar uma atividade, é necessário abrir o arquivo de manifesto e adicionar um elemento &ltactivity> como filho do elemento &ltapplication>, Note que o nome é obrigatório. Como em: 
+                <xmp class="border border-light">
+    <manifest ... >
+        <application ... >
+            <activity android:name=".ExampleActivity" />
+            ...
+        </application ... >
+        ...
+    </manifest >   
+                </xmp>               
+            </div>
+            <div class="topic-subtitle mt-1 font-weight-bold text-center pb-1">
+                Manipulando uma Activity
+            </div>
+            <div class="mt-1 pb-2">
+                Por passarem por vários estados enquanto funcionam, as Activities são manipuladas por meio de métodos callbacks, na qual cada callback é chamada quando a Activity atinge certo estado. São exemplos de Callbacks:
+                <br><br>
+                <span class="font-weight-bold">onCreate()</span>: Callback obrigatória para o sistema e é iniciada quando o sistema cria a Activity. É esta callback que inicia os componentes essenciais da Activity, sendo também, o lugar onde é definido o layout da interface.
+                <br><br>
+                <span class="font-weight-bold">onStart()</span>: Callback iniciada quando a OnCreate() termina e a interface prepara-se para tornar-se visível e interativa ao usuário.
+                <br><br>
+                <span class="font-weight-bold">onPause()</span>: Callback iniciada quando a Activity torna-se segundo plano para o usuário. Uma atividade pausada pode continuar atualizando sua interface se necessário.
+                <br><br>
+                <span class="font-weight-bold">onResume()</span>: Callback iniciada assim que o usuário começa a interagir com a atividade, a maior parte de uma Activity é implementada neste método.
+                <br><br>
+                <span class="font-weight-bold">onStop()</span>: Callback iniciada quando a atividade deixa de ser visível ao usuário e torna-se interrompida.
+                <br><br>
+                <span class="font-weight-bold">onRestart()</span>: Callback iniciada quando a atividade interrompida está para ser reiniciada novamente.
+                <br><br>
+                <span class="font-weight-bold">onDestroy()</span>: Callback iniciada pouco antes da atividade ser destruída. Esta é a última callback recebida a partir da Activity.
+            </div>
+        </div>
+        <div class="mt-4">
+
+        </div>
+    </body>
+</html>
