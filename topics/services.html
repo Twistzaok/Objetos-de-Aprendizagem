@@ -53,7 +53,17 @@
                 Declarando e Iniciando um Serviço
             </div>
             <div class="mt-1 pb-2">
-              
+                Para declarar um serviço, é necessário usar o manifesto e adicionar um elemento &ltservice> como filho do elemento &ltapplication>, assim como nas atividades, apenas o nome é obrigatório. Exemplo: 
+                <xmp class="border border-light">
+    <manifest ... >
+        ...
+        <application ... >
+            <service android:name=".ExampleService" />
+            ...
+        </application>
+    </manifest>
+                </xmp>
+                Para iniciar um serviço, é necessário utilizar o comando startService() em algum outro componente, resultando no método onStartCommand() para o serviço. Um serviço iniciado funciona por tempo indeterminado até que seja concluído ou que seja parado por outro componente via stopService().
             </div>
             <div class="topic-subtitle mt-1 font-weight-bold text-center pb-1">
                 Manipulando um Service
