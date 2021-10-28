@@ -35,83 +35,83 @@ var questoes = [
     // 2
     {
         t:  "Marque a alternativa incorreta.",
-        q1: "a) Os aplicativos não podem enviar transmissões.",
-        q2: "b) As transmissões sem goAsync() não são recomendadas para atividades de Segundo Plano.",
-        q3: "c) Iniciar uma Activity a partir de um receptor pode gerar problemas para o usuário.",
-        q4: "d) É recomendado enviar transmissões locais utilizando o LocalBroadcastManager.",
-        r:  "q1"
+        q1: "a) Os Provedores são principalmente destinados ao seu uso por outros aplicativos.",
+        q2: "b) ContentResolver pode realizar todas as ações de um CRUD.",
+        q3: "c) Um content provider não esta relacionado ao banco de dados",
+        q4: "d) Para exibir os dados, é necessário usar o método ContentResolver.query()",
+        r:  "q3"
     },
     // 3
     {
-        t:  "Complete: O sistema ... cria um novo receptor quando lida com ... novas.",
-        q1: "a) Nunca, transmissões.",
-        q2: "b) Nunca, permissões.",
-        q3: "c) Sempre, transmissões.",
-        q4: "d) Sempre, permissões.",
-        r:  "q3"
+        t:  "Content provider são utilizados quando:",
+        q1: "a) É necessário compartilhamento de dados entre diferentes aplicações.",
+        q2: "b) É necessário impedir o acesso dos dados.",
+        q3: "c) Os conteúdos devem ser acessados apenas por uma aplicação. ",
+        q4: "d) É necessário Privar o usuário de acessar o conteúdo.",
+        r:  "q1"
     },
     // 4
     {
-        t:  "Para criar um receptor no Manifest é necessário:",
-        q1: "a) Especificar o <manifest> e usar a subclasse Activity.",
-        q2: "b) Especificar o <receiver> e usar a subclasse BroadcastReceiver.",
-        q3: "c) Especificar o onReceive() e usar a subclasse Manifest.",
-        q4: "d) Especificar o <receiver> e usar a subClasse onReceive.",
+        t:  "O Content Provider gerencia o acesso aos dados de uma aplicação Android. Sobre Content Providers, é correto afirmar que:",
+        q1: "a) Content.Resolver.query() Cria uma classe no mesmo diretório onde reside o arquivo MainActivity  .",
+        q2: "b) Content providers implementam uma interface comum para fazer buscas e retornar resultados.",
+        q3: "c) Content.Provider.query() se comunica com o objeto do provedor.",
+        q4: "d) Content providers implementam interfaces diferentes para manter as aplicação isoladas.",
         r:  "q2"
     },
-    // 5
+     // 5
     {
-        t:  "Para criar um receptor no Context é necessário:",
-        q1: "a) Criar uma instância BroadcastReceiver e registrar o Receiver.",
-        q2: "b) Especificar o <receiver> e usar a subclasse BroadcastReceiver.",
-        q3: "c) Criar uma instância IntentFilter e fazer o registro utilizando BroadcastReceiver.",
-        q4: "d) Não é necessário criar nenhuma instância já que o receptor é inato do Context.",
-        r:  "q1"
+        t:  "Sobre o objeto ContentResolver, é incorreto afirmar que:",
+        q1: "a) ContentResolver.insert() é utilizado para inserir conteúdo no provedor.",
+        q2: "b) ContentResolver.select() é utilizado para ocultar os conteúdos no provedor",
+        q3: "c) ContentResolver.update() é utilizado para atualizar valores adicionando-os no ContentValues.",
+        q4: "d) ContentResolver.delete() é utilizado para especificar a seleção, informando o user que será deletado.",
+        r:  "q2"
     },
     // 6
     {
-        t:  "Qual NÃO é um método de transmitir Broadcast?",
-        q1: "a) sendOrderedBroadcast",
-        q2: "b) sendBroadcast",
-        q3: "c) LocalBroadcastManager.sendBroadcast",
-        q4: "d) sendReversedBroadcast",
+        t:  "Para acessar um Provedor é necessário utilizar:",
+        q1: "a) um objeto ContentReader",
+        q2: "b) um objeto ContentReturn",
+        q3: "c) um objeto ContentRuler",
+        q4: "d) um objeto ContentResolver",
         r:  "q4"
     },
     // 7
     {
-        t:  "Para enviar uma transmissão dentro de um aplicativo, é recomendado usar:",
-        q1: "a) sendOrderedBroadcast",
-        q2: "b) sendBroadcast",
-        q3: "c) LocalBroadcastManager.sendBroadcast",
-        q4: "d) sendProtectedBroadcast",
-        r:  "q3"
+        t:  "São métodos de um Content Provider?",
+        q1: "a) query(), insert(), update(), delete(), getType() e onCreate().",
+        q2: "b) Activity (), insert(), update(), delete(), select() e onCreate().",
+        q3: "c) query(), insert(), update(), delete(), select() e onCreate().",
+        q4: "d) Activity (), insert(), update(), delete(), getType() e onCreate().",
+        r:  "q1"
     },
     // 8
     {
-        t:  "Para enviar várias transmissões não sequenciais, é recomendado usar:",
-        q1: "a) sendOrderedBroadcast",
-        q2: "b) sendBroadcast",
-        q3: "c) LocalBroadcastManager.sendBroadcast",
-        q4: "d) sendProtectedBroadcast",
-        r:  "q2"
+        t:  "Por que plataformas Android utilizam Content Provider?",
+        q1: "a) Porque o Android possui varios locais para guardar os dados aplicações",
+        q2: "b) para as aplicações carregarem mais rápido",
+        q3: "c) Porque o Android não possui um local comum para guardar os dados das aplicações",
+        q4: "d) para ter mais espaço para armazenar as aplicações",
+        r:  "q3"
     },
-    // 9
+ // 9
     {
-        t:  "Para enviar várias transmissões onde é necessário uma checagem das transmissões, é recomendado usar:",
-        q1: "a) sendOrderedBroadcast",
-        q2: "b) sendBroadcast",
-        q3: "c) LocalBroadcastManager.sendBroadcast",
-        q4: "d) sendProtectedBroadcast",
-        r:  "q1"
+       t:  "Oque é necessário para recuperar dados de um Provedor?",
+        q1: "a) Usar O método ContentResolver.select() ",
+        q2: "b) Criar e definir váriaveis para acessar o Provedor desejado.",
+        q3: "c) Criar uma superclasse para extrair os dados do provedor desejado",
+        q4: "d) Usar O método ContentResolver.insert() ",
+        r:  "q2"
     },
     // 10
     {
-        t:  "Para enviar transmissões sem especificações é recomendado usar:",
-        q1: "a) sendOrderedBroadcast",
-        q2: "b) sendBroadcast",
-        q3: "c) LocalBroadcastManager.sendBroadcast",
-        q4: "d) sendProtectedBroadcast",
-        r:  "q2"
+        t:  "Oque é necessário para exibir os dados",
+        q1: "a) usar o método ContentResolver.query() ",
+        q2: "b) usar o método ContentResolver.onCreate()",
+        q3: "c) Usar O método ContentResolver.insert()",
+        q4: "d) Criar e definir váriaveis para acessar o Provedor desejado. ",
+        r:  "q1"
     }
 ];
 
