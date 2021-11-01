@@ -37,6 +37,13 @@
             </div>
             <div class="mt-1 pb-2">
                 Uma Intent é um objeto que é utilizado para solicitar uma ação de outro componente do aplicativo. Embora possam trabalhar de diversas formas, possui 3 formas fundamentais, iniciando uma atividade, um serviço ou fornecendo uma transmissão.
+                <br><br>
+                Uma Intent pode ainda ser classificada como Implícita ou Explícita, sendo que:
+                <br>
+                <span class="font-weight-bold">Explícita</span>: especificam qual aplicativo atenderá ao Intent, fornecendo dados de um componente qualificado. Geralmente, é utilizado quando sabe-se o nome da atividade ou serviço que se iniciará. 
+                <br>
+                <span class="font-weight-bold">Implícita</span>: não especificam qual aplicativo atenderá ao Intent, declarando apenas qual ação deverá ser executada. 
+ 
             </div>
             <div class="topic-subtitle mt-1 font-weight-bold text-center pb-1">
                 Iniciando 
@@ -49,7 +56,6 @@
                 <span class="font-weight-bold">Services</span>: É possível iniciar um Serviço utilizando um JobScheduler. É possível também vincular um Serviço em outro componente passando um Intent para bindService().
                 <br><br>
                 <span class="font-weight-bold">Services</span>: É possível fornecer uma transmissão para outros aplicativos passando um Intent ao sendBroadcast() ou sendOrderedBroadcast().
-
             </div>
             <div class="topic-subtitle mt-1 font-weight-bold text-center pb-1">
                 Manipulando
