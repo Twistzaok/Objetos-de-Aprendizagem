@@ -61,7 +61,7 @@ var questoes = [
     },
     // 5
     {
-        t:  "aaa\naaa",
+        t:  "aaa/naaa",
         q1: "a) Criar uma instância BroadcastReceiver e registrar o Receiver.",
         q2: "b) Especificar o <receiver> e usar a subclasse BroadcastReceiver.",
         q3: "c) Criar uma instância IntentFilter e fazer o registro utilizando BroadcastReceiver.",
