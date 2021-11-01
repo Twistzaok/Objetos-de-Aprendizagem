@@ -37,7 +37,7 @@ var questoes = [
         t:  "Marque a alternativa incorreta.",
         q1: "a) Os Provedores são principalmente destinados ao seu uso por outros aplicativos.",
         q2: "b) ContentResolver pode realizar todas as ações de um CRUD.",
-        q3: "c) Um content provider não esta relacionado ao banco de dados",
+        q3: "c) Um Content Provider não esta relacionado ao banco de dados",
         q4: "d) Para exibir os dados, é necessário usar o método ContentResolver.query()",
         r:  "q3"
     },
@@ -47,16 +47,16 @@ var questoes = [
         q1: "a) É necessário compartilhamento de dados entre diferentes aplicações.",
         q2: "b) É necessário impedir o acesso dos dados.",
         q3: "c) Os conteúdos devem ser acessados apenas por uma aplicação. ",
-        q4: "d) É necessário Privar o usuário de acessar o conteúdo.",
+        q4: "d) É necessário privar o usuário de acessar o conteúdo.",
         r:  "q1"
     },
     // 4
     {
         t:  "O Content Provider gerencia o acesso aos dados de uma aplicação Android. Sobre Content Providers, é correto afirmar que:",
-        q1: "a) Content.Resolver.query() Cria uma classe no mesmo diretório onde reside o arquivo MainActivity  .",
-        q2: "b) Content providers implementam uma interface comum para fazer buscas e retornar resultados.",
+        q1: "a) Content.Resolver.query() cria uma classe no mesmo diretório onde reside o arquivo MainActivity.",
+        q2: "b) Content Providers implementam uma interface comum para fazer buscas e retornar resultados.",
         q3: "c) Content.Provider.query() se comunica com o objeto do provedor.",
-        q4: "d) Content providers implementam interfaces diferentes para manter as aplicação isoladas.",
+        q4: "d) Content Providers implementam interfaces diferentes para manter as aplicação isoladas.",
         r:  "q2"
     },
      // 5
@@ -71,10 +71,10 @@ var questoes = [
     // 6
     {
         t:  "Para acessar um Provedor é necessário utilizar:",
-        q1: "a) um objeto ContentReader",
-        q2: "b) um objeto ContentReturn",
-        q3: "c) um objeto ContentRuler",
-        q4: "d) um objeto ContentResolver",
+        q1: "a) Um objeto ContentReader",
+        q2: "b) Um objeto ContentReturn",
+        q3: "c) Um objeto ContentRuler",
+        q4: "d) Um objeto ContentResolver",
         r:  "q4"
     },
     // 7
@@ -89,26 +89,26 @@ var questoes = [
     // 8
     {
         t:  "Por que plataformas Android utilizam Content Provider?",
-        q1: "a) Porque o Android possui varios locais para guardar os dados aplicações",
-        q2: "b) para as aplicações carregarem mais rápido",
-        q3: "c) Porque o Android não possui um local comum para guardar os dados das aplicações",
-        q4: "d) para ter mais espaço para armazenar as aplicações",
+        q1: "a) Porque o Android possui vários locais para guardar os dados das aplicações.",
+        q2: "b) Para as aplicações carregarem mais rápido.",
+        q3: "c) Porque o Android não possui um local comum para guardar os dados das aplicações.",
+        q4: "d) Para ter mais espaço para armazenar as aplicações.",
         r:  "q3"
     },
  // 9
     {
-       t:  "Oque é necessário para recuperar dados de um Provedor?",
-        q1: "a) Usar O método ContentResolver.select() ",
+       t:  "O que é necessário para recuperar dados de um Provedor?",
+        q1: "a) Usar o método ContentResolver.select() ",
         q2: "b) Criar e definir váriaveis para acessar o Provedor desejado.",
         q3: "c) Criar uma superclasse para extrair os dados do provedor desejado",
-        q4: "d) Usar O método ContentResolver.insert() ",
+        q4: "d) Usar o método ContentResolver.insert() ",
         r:  "q2"
     },
     // 10
     {
-        t:  "Oque é necessário para exibir os dados",
-        q1: "a) usar o método ContentResolver.query() ",
-        q2: "b) usar o método ContentResolver.onCreate()",
+        t:  "O que é necessário para exibir os dados",
+        q1: "a) Usar o método ContentResolver.query() ",
+        q2: "b) Usar o método ContentResolver.onCreate()",
         q3: "c) Usar O método ContentResolver.insert()",
         q4: "d) Criar e definir váriaveis para acessar o Provedor desejado. ",
         r:  "q1"
