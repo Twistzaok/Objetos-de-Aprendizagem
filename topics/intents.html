@@ -39,9 +39,9 @@
                 Uma Intent é um objeto que é utilizado para solicitar uma ação de outro componente do aplicativo. Embora possam trabalhar de diversas formas, possui 3 formas fundamentais, iniciando uma atividade, um serviço ou fornecendo uma transmissão.
                 <br><br>
                 Uma Intent pode ainda ser classificada como Implícita ou Explícita, sendo que:
-                <br>
+                <br><br>
                 <span class="font-weight-bold">Explícita</span>: especificam qual aplicativo atenderá ao Intent, fornecendo dados de um componente qualificado. Geralmente, é utilizado quando sabe-se o nome da atividade ou serviço que se iniciará. 
-                <br>
+                <br><br>
                 <span class="font-weight-bold">Implícita</span>: não especificam qual aplicativo atenderá ao Intent, declarando apenas qual ação deverá ser executada. 
  
             </div>
@@ -58,10 +58,18 @@
                 <span class="font-weight-bold">Services</span>: É possível fornecer uma transmissão para outros aplicativos passando um Intent ao sendBroadcast() ou sendOrderedBroadcast().
             </div>
             <div class="topic-subtitle mt-1 font-weight-bold text-center pb-1">
-                Manipulando
+                Criando
             </div>
             <div class="mt-1 pb-2">
-
+                Um objeto Intent carrega informações para determinar o componente que será iniciado, portanto, ao criar um Intent pode ser necessário fornecer alguns dados, como por exemplo:
+                <br><br>
+                <span class="font-weight-bold">Nome</span>: Opcional, se for definido tornará a Intent explícita. É possível definir o nome do componente com setComponent(), setClass(), setClassName() ou com o construtor Intent.
+                <br><br>
+                <span class="font-weight-bold">Ação</span>: String que especifica a ação a se realizar. É possível especificar a ação para um intent com setAction() ou com um construtor Intent.
+                <br><br>
+                <span class="font-weight-bold">Dados</span>: É um objeto URI que referencia os dados a serem aproveitados. Para definir só um URI de dados, utilize setData().
+                <br><br>
+                <span class="font-weight-bold">Categoria</span>: É possível especificar uma categoria com addCategory().
             </div>
         </div>
         <div class="mt-4">
