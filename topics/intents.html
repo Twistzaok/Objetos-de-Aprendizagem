@@ -30,25 +30,26 @@
                 Intents
             </div>
         </div>
-
+    
         <div class="container-2 topic-body mt-2 px-4">
             <div class="topic-subtitle mt-1 font-weight-bold text-center pb-1">
                 O que são?
             </div>
             <div class="mt-1 pb-2">
-
+                Uma Intent é um objeto que é utilizado para solicitar uma ação de outro componente do aplicativo. Embora possam trabalhar de diversas formas, possui 3 formas fundamentais, iniciando uma atividade, um serviço ou fornecendo uma transmissão.
             </div>
             <div class="topic-subtitle mt-1 font-weight-bold text-center pb-1">
-                Conceito
+                Iniciando 
             </div>
             <div class="mt-1 pb-2">
+                Como podem trabalhar de diversas formas, existem várias formas de iniciar uma Intent, sendo as principais:
+                <br><br>
+                <span class="font-weight-bold">Activity</span>: É possível iniciar uma nova instância de Atividade passando um Intent para startActivity(). O Intent descreverá a Activity e carregará os dados necessários. 
+                <br><br>
+                <span class="font-weight-bold">Services</span>: É possível iniciar um Serviço utilizando um JobScheduler. É possível também vincular um Serviço em outro componente passando um Intent para bindService().
+                <br><br>
+                <span class="font-weight-bold">Services</span>: É possível fornecer uma transmissão para outros aplicativos passando um Intent ao sendBroadcast() ou sendOrderedBroadcast().
 
-            </div>
-            <div class="topic-subtitle mt-1 font-weight-bold text-center pb-1">
-                Declarando e Iniciando 
-            </div>
-            <div class="mt-1 pb-2">
-             
             </div>
             <div class="topic-subtitle mt-1 font-weight-bold text-center pb-1">
                 Manipulando
