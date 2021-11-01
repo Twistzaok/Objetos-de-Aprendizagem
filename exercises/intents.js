@@ -46,8 +46,8 @@ var questoes = [
         t:  "Uma Intent será explícita quando tiver:",
         q1: "a) Nome",
         q2: "b) Ação",
-        q3: "c) Dados",
-        q4: "d) Categoria",
+        q3: "c) Interface",
+        q4: "d) ID",
         r:  "q1"
     },
     // 4
@@ -61,57 +61,57 @@ var questoes = [
     },
     // 5
     {
-        t:  "aaa/naaa",
-        q1: "a) Criar uma instância BroadcastReceiver e registrar o Receiver.",
-        q2: "b) Especificar o <receiver> e usar a subclasse BroadcastReceiver.",
-        q3: "c) Criar uma instância IntentFilter e fazer o registro utilizando BroadcastReceiver.",
-        q4: "d) Não é necessário criar nenhuma instância já que o receptor é inato do Context.",
+        t:  "Para iniciar uma Intent para Activity é necessário:",
+        q1: "a) Passar um Intent para startActivity().",
+        q2: "b) Iniciar um Serviço utilizando um JobScheduler.",
+        q3: "c) Passar um Intent ao sendBroadcast() ou sendOrderedBroadcast()..",
+        q4: "d) Passar um Intent para startProvider().",
         r:  "q1"
     },
     // 6
     {
-        t:  "Qual NÃO é um método de transmitir Broadcast?",
-        q1: "a) sendOrderedBroadcast",
-        q2: "b) sendBroadcast",
-        q3: "c) LocalBroadcastManager.sendBroadcast",
-        q4: "d) sendReversedBroadcast",
-        r:  "q4"
+        t:  "Para iniciar uma Intent para Service é necessário:",
+        q1: "a) Passar um Intent para startActivity().",
+        q2: "b) Iniciar um Serviço utilizando um JobScheduler.",
+        q3: "c) Passar um Intent ao sendBroadcast() ou sendOrderedBroadcast()..",
+        q4: "d) Passar um Intent para startProvider().",
+        r:  "q2"
     },
     // 7
     {
-        t:  "Para enviar uma transmissão dentro de um aplicativo, é recomendado usar:",
-        q1: "a) sendOrderedBroadcast",
-        q2: "b) sendBroadcast",
-        q3: "c) LocalBroadcastManager.sendBroadcast",
-        q4: "d) sendProtectedBroadcast",
+        t:  "São exemplos de dados para criação de Intents:",
+        q1: "a) Nome, Ação, Interface, Dados",
+        q2: "b) Nome, Ação, Interface, ID",
+        q3: "c) Nome, Ação, Dados, Categoria",
+        q4: "d) Nome, Ação, Dados, ID",
         r:  "q3"
     },
     // 8
     {
-        t:  "Para enviar várias transmissões não sequenciais, é recomendado usar:",
-        q1: "a) sendOrderedBroadcast",
-        q2: "b) sendBroadcast",
-        q3: "c) LocalBroadcastManager.sendBroadcast",
-        q4: "d) sendProtectedBroadcast",
-        r:  "q2"
+        t:  "Para especificar ações é necessário usar:",
+        q1: "a) setAction() ou construtor Intent.",
+        q2: "b) createAction() ou construtor Intent.",
+        q3: "c) startAction() ou construtor Intent.",
+        q4: "d) bindAction() ou construtor Intent.",
+        r:  "q1"
     },
     // 9
     {
-        t:  "Para enviar várias transmissões onde é necessário uma checagem das transmissões, é recomendado usar:",
-        q1: "a) sendOrderedBroadcast",
-        q2: "b) sendBroadcast",
-        q3: "c) LocalBroadcastManager.sendBroadcast",
-        q4: "d) sendProtectedBroadcast",
-        r:  "q1"
+        t:  "Qual dos métodos a seguir NÃO é utilizado para definir nomes:",
+        q1: "a) setComponent()",
+        q2: "b) setComponentName()",
+        q3: "c) setClass()",
+        q4: "d) setClassName()",
+        r:  "q2"
     },
     // 10
     {
-        t:  "Para enviar transmissões sem especificações é recomendado usar:",
-        q1: "a) sendOrderedBroadcast",
-        q2: "b) sendBroadcast",
-        q3: "c) LocalBroadcastManager.sendBroadcast",
-        q4: "d) sendProtectedBroadcast",
-        r:  "q2"
+        t:  "É possível especificar uma categoria com:",
+        q1: "a) addCategory()",
+        q2: "b) setCategory()",
+        q3: "c) bindCategory()",
+        q4: "d) createCategory()",
+        r:  "q1"
     }
 ];
 
