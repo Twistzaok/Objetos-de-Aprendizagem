@@ -25,43 +25,43 @@ var p9 = document.getElementById('p9');
 var questoes = [
     // 1
     {
-        t:  "O que é uma transmissão?",
-        q1: "a) Uma mensagem enviada via ondas de rádio para um aplicativo Android.",
-        q2: "b) Uma mensagem enviada por um dispositivo externo como uma televisão para um aplicativo Android.",
-        q3: "c) Uma mensagem enviada do sistema Android e de outros aplicativos Android entre si.",
-        q4: "d) Uma mensagem criptografada enviada para fins de segurança para um aplicativo Android.",
-        r:  "q3"
+        t:  "Para que serve uma Intent?",
+        q1: "a) Uma Intent é um objeto utilizado para solicitar uma ação de outro componente.",
+        q2: "b) Uma Intent é um objeto utilizado para conectar dois usuários. ",
+        q3: "c) Uma Intent é um objeto utilizado para desconectar dois usuários.",
+        q4: "d) Uma Intent é um objeto utilizado para explicar o sistema ao usuário.",
+        r:  "q1"
     },
     // 2
     {
-        t:  "Marque a alternativa incorreta.",
-        q1: "a) Os aplicativos não podem enviar transmissões.",
-        q2: "b) As transmissões sem goAsync() não são recomendadas para atividades de Segundo Plano.",
-        q3: "c) Iniciar uma Activity a partir de um receptor pode gerar problemas para o usuário.",
-        q4: "d) É recomendado enviar transmissões locais utilizando o LocalBroadcastManager.",
-        r:  "q1"
+        t:  "Uma Intent será implícita quando:",
+        q1: "a) Especificam o componente e a ação.",
+        q2: "b) Especificam o componente mas não a ação.",
+        q3: "c) Não especificam o componente nem a ação.",
+        q4: "d) Não especificam o componente mas a ação.",
+        r:  "q4"
     },
     // 3
     {
-        t:  "Complete: O sistema ... cria um novo receptor quando lida com ... novas.",
-        q1: "a) Nunca, transmissões.",
-        q2: "b) Nunca, permissões.",
-        q3: "c) Sempre, transmissões.",
-        q4: "d) Sempre, permissões.",
-        r:  "q3"
+        t:  "Uma Intent será explícita quando tiver:",
+        q1: "a) Nome",
+        q2: "b) Ação",
+        q3: "c) Dados",
+        q4: "d) Categoria",
+        r:  "q1"
     },
     // 4
     {
-        t:  "Para criar um receptor no Manifest é necessário:",
-        q1: "a) Especificar o <manifest> e usar a subclasse Activity.",
-        q2: "b) Especificar o <receiver> e usar a subclasse BroadcastReceiver.",
-        q3: "c) Especificar o onReceive() e usar a subclasse Manifest.",
-        q4: "d) Especificar o <receiver> e usar a subClasse onReceive.",
-        r:  "q2"
+        t:  "Para iniciar uma Intent para Provider é necessário:",
+        q1: "a) Passar um Intent para startActivity().",
+        q2: "b) Iniciar um Serviço utilizando um JobScheduler.",
+        q3: "c) Passar um Intent ao sendBroadcast() ou sendOrderedBroadcast()..",
+        q4: "d) Passar um Intent para startProvider().",
+        r:  "q3"
     },
     // 5
     {
-        t:  "Para criar um receptor no Context é necessário:",
+        t:  "aaa\naaa",
         q1: "a) Criar uma instância BroadcastReceiver e registrar o Receiver.",
         q2: "b) Especificar o <receiver> e usar a subclasse BroadcastReceiver.",
         q3: "c) Criar uma instância IntentFilter e fazer o registro utilizando BroadcastReceiver.",
